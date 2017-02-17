@@ -29,6 +29,9 @@ public class RedisQueue {
 	public static String loadJson(String json){
 		return null;
 	}
+	 static String fentch_data_and_send_email(String email){
+		return null;
+	}
 	/**
 	 * 
 	  * @Title: send_sold_email_via_queue 
@@ -50,7 +53,7 @@ public class RedisQueue {
     	jedis.rpush("queue:email", json);
     	return null;  	
     }
-	public static String process_sold_email_queue(Jedis jedis){
+	public static void process_sold_email_queue(Jedis jedis){
     	boolean quit=false;
     	List<String> list=null;
     	while(!quit){
@@ -60,12 +63,11 @@ public class RedisQueue {
         	}
         	for(String json:list){
                 String to_send=loadJson(json);
+                fentch_data_and_send_email(to_send);
+                System.out.println("Send sold email:"+to_send);
     	    }
         	quit=true;
-    	}
-    	
-    	
-    	return null;  	
+    	}	
     }
 	/** 
 	 * @Title: main 

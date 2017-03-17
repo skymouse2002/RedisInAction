@@ -95,10 +95,6 @@ public class RedisSearchIP {
  	                    String cityId=datas[2].replaceAll("\"", "");
  	                    System.out.println(endIp+"cityid is:"+cityId);
  	                   jedis.zadd(city_id, Double.valueOf(endIp), cityId);
-// 	                    System.out.println(datas[0]+" is:"+datas[1]+datas[2]);
-// 	                    for(String d:datas){
-// 	                    	System.out.println(d);
-// 	                    }
  	            	}
  	                i++;
  	            }
@@ -128,10 +124,6 @@ public class RedisSearchIP {
  	                    String cityId=datas[2].replaceAll("\"", "");
  	                    System.out.println(endIp+"cityid is:"+cityId);
  	                   jedis.zadd(city_id, Double.valueOf(endIp), cityId+"_"+i);
-// 	                    System.out.println(datas[0]+" is:"+datas[1]+datas[2]);
-// 	                    for(String d:datas){
-// 	                    	System.out.println(d);
-// 	                    }
  	            	}
  	                i++;
  	            }
@@ -162,10 +154,6 @@ public class RedisSearchIP {
  	                    String cityId=datas[2].replaceAll("\"", "");
  	                    System.out.println(beginIp+"cityid is:"+cityId);
  	                   jedis.zadd(begin_city_id, Double.valueOf(beginIp), cityId);
-// 	                    System.out.println(datas[0]+" is:"+datas[1]+datas[2]);
-// 	                    for(String d:datas){
-// 	                    	System.out.println(d);
-// 	                    }
  	            	}
  	                i++;
  	            }
@@ -204,10 +192,6 @@ public class RedisSearchIP {
  	                    String cityId=datas[2].replaceAll("\"", "");
  	                    System.out.println(beginIp+"cityid is:"+cityId);
  	                   jedis.zadd(begin_city_id, Double.valueOf(beginIp), cityId+"_"+i);
-// 	                    System.out.println(datas[0]+" is:"+datas[1]+datas[2]);
-// 	                    for(String d:datas){
-// 	                    	System.out.println(d);
-// 	                    }
  	            	}
  	                i++;
  	            }
@@ -279,7 +263,6 @@ public class RedisSearchIP {
 
 		double IPScore=getIPScore("1.180.235.39");
 
-//		// 1.180.235.39
 //        double IPScore=getIPScore("60.247.9.230");
         Jedis jedis=null;
  		try {
